@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services everafterplanners</title>
+           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+<style>
+  
+/*Slide Down Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-30px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    body, html {
+  overflow-x: hidden;
+}
+    /* Hero Section */
+    
+    .hero {
+      position: relative;
+      height: 65vh;
+      background: url(images/banner-sevices.jpg) center center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+      margin-top: 0;
+    }
+
+ 
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    /* Hero Content */
+    .hero-overlay {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
+    }
+
+    .hero-overlay h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+      letter-spacing: 1px;
+      animation: slideDown 1.2s ease-in-out;
+    }
+
+    .hero-overlay p {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    }
+  
+  body{
+    padding-top: 80px;
+  }
+  .service-card {
+        border: none;
+        transition: all 0.3s ease;
+        background: #fff;
+        border-radius: 15px;
+        border: 2px solid black;
+      }
+      .service-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+      }
+      .service-card img {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        height: 220px;
+        object-fit: cover;
+      }
+      .service-card h5 {
+        font-family: 'Playfair Display', serif;
+        color: #d63384;
+        font-weight: bold;
+      }
+      .service-card p {
+        color: #555;
+        font-size: 1rem;
+      }
+      .content{
+        color: black;
+        text-decoration: none;
+      }
+      .content:hover{
+        color: azure;
+      }
+     
+
+
+     
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/mystyle.css">
+</head>
+<body>
+  
+  
+  <!--header start-->
+  <header>
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+      <div class="container">
+        <img src="images/logo1.png" width="180" height="80" class="me-2" alt="Logo">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link " href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link active fw-bold "  style="color:#d63384" href="services.html">Services</a></li>
+             <li class="nav-item"><a class="nav-link " href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link " href="event_detail.html">Events</a></li>
+            <li class="nav-item"><a class="nav-link " href="registration.html">Register</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end -->
+  </header>
+
+   
+    <!-- Hero Section -->
+  <section class="hero mb-3">
+    <div class="hero-overlay">
+      <h1>Our services</h1>
+      <p>Designing and executing events that exceed expectations</p>
+    </div>
+  </section>
+  <!-- card section -->
+  <div class="container mt-4">
+    <div class="row">
+        <div class="col-md-4">
+          <div class="card service-card shadow-sm">
+            <img src="images/services2.webp" alt="Weddings">
+            <div class="card-body text-center">
+              <h5>Weddings</h5>
+              <p>Your wedding day is not just an event; it’s the culmination of a lifelong dream, a momentous occasion that marks the beginning of a beautiful journey together. At EverAfterPlanners, we approach wedding planning with a deep understanding of its significance. </p>
+            </div>
+          </div>
+      </div>
+      
+     
+     <div class="col-md-4">
+          <div class="card service-card shadow-sm">
+            <img src="images/services3.webp" alt="pre-wedding Events">
+            <div class="card-body text-center">
+              <h5> Pre-Wedding</h5>
+              <p>Embarking on the journey to matrimony is a special milestone, and EverAfterPlanners understands the significance of this transition. Our pre-wedding events are meticulously designed to infuse the atmosphere with a blend of anticipation, romance, and joy.</p>
+            </div>
+          </div>
+        </div>
+
+             <div class="col-md-4">
+          <div class="card service-card shadow-sm">
+            <img src="images/services1.webp" alt="pre-wedding Events">
+            <div class="card-body text-center">
+              <h5> Kids Theme Parties</h5>
+              <p>A child’s birthday is a moment of pure delight and wonder, andEverAfterPlanners knows just how to make it extraordinary. Our team specializes in creating immersive experiences that transform ordinary spaces into magical wonderlands, favorite characters and interests.</p>
+            </div>
+          </div>
+        </div>
+        
+          <div class="col-md-4">
+          <div class="card service-card shadow-sm">
+            <img src="images/baby-showers.webp" alt="baby shower Events">
+            <div class="card-body text-center">
+              <h5> Baby Showers</h5>
+              <p>Welcoming a new life into the world is a momentous occasion, and EverAfterPlanners is dedicated to creating heartwarming and memorable baby showers. We understand that this celebration is a cherished milestone in the journey to parenthood , extraordinary.</p>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-md-4">
+          <div class="card service-card shadow-sm">
+            <img src="images/birthday-parties_services.webp" alt="pre-wedding Events">
+            <div class="card-body text-center">
+              <h5> Birthday Parties</h5>
+              <p>At EverAfterPlanners, we believe that every birthday is an occasion worth celebrating, regardless of age. Whether you’re turning eight or eighty, our team is dedicated to crafting birthday parties Turning moments into memories</p>
+            </div>
+          </div>
+        </div>
+
+        
+         <div class="col-md-4">
+          <div class="card service-card shadow-sm">
+            <img src="images/get-togethers.webp" alt="get-togethers Events">
+            <div class="card-body text-center">
+              <h5> Get-Togethers</h5>
+              <p>Reconnecting with friends and family in a warm and inviting atmosphere is a cherished occasion, and EverAfterPlanners specializes in planning social get-togethers that leave a lasting impression .celebrate moments create memories..</p>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-md-4">
+          <div class="card service-card shadow-sm">
+            <img src="images/college-festivals services.webp" alt="college-Festivals Events">
+            <div class="card-body text-center">
+              <h5> College-Festivals</h5>
+              <p>Bringing campus life to vibrant life, EverAfterPlanners specializes in organizing engaging college festivals that create unforgettable experiences for students Unite, Celebrate, Create Memories.</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4">
+          <div class="card service-card shadow-sm">
+            <img src="images/coprporate-events.webp" alt="Conferences Events">
+            <div class="card-body text-center">
+              <h5> Conferences</h5>
+              <p>Host a seamless and productive conference with EverAfterPlanners expert planning and execution. From venue selection to agenda planning, we ensure every detail is attended to Knowledge shared is power multiplied.</p>
+            </div>
+          </div>
+        </div>
+<div class="col-md-4">
+          <div class="card service-card shadow-sm">
+            <img src="images/coprporate3.webp" alt="Corporate Events">
+            <div class="card-body text-center">
+              <h5>Corporate Events</h5>
+              <p>Drive brand awareness and engagement with strategic promotional activities. EverAfterPlanners excels at creating memorable experiences that leave a lasting impact on your target audience.</p>
+            </div>
+          </div>
+        </div>
+
+         <div class="col-md-4">
+          <div class="card service-card shadow-sm">
+            <img src="images/award nights.webp" alt="Award Nights">
+            <div class="card-body text-center">
+              <h5>Award Nights</h5>
+              <p>Recognize and celebrate excellence within your organization with a prestigious award night. EverAfterPlanners creates a memorable evening that honors achievements and motivates your team</p>
+            </div>
+          </div>
+    </div>
+
+     <div class="col-md-4">
+          <div class="card service-card shadow-sm">
+            <img src="images/services4.webp" alt="Award Nights">
+            <div class="card-body text-center">
+              <h5>Team-Building </h5>
+              <p>Strengthen teamwork and camaraderie with engaging team-building events. EverAfterPlanners designs activities and experiences that promote collaboration and unity among your team members</p>
+            </div>
+          </div>
+    </div>
+    <div class="col-md-4">
+          <div class="card service-card shadow-sm">
+            <img src="images/product-launches.webp" alt="Award Nights">
+            <div class="card-body text-center">
+              <h5>Product Launches </h5>
+              <p>Unveil your latest products or services with an impactful launch orchestrated by EverAfterPlanners We ensure a grand introduction that captivates your audience Fresh, bold, and built for you.</p>
+            </div>
+          </div>
+    </div>
+
+
+  </div>
+</div>
+ <!--Footer start-->
+
+
+<footer class="text-white pt-5" style="background-color: #000;">
+    <section>
+      <div class="container">
+        <div class="row">
+
+         
+          <div class="col-md-4 text-start mb-4">
+            <div class="d-flex align-items-center mb-3">
+              <img src="images/logo1.png" alt="EverAfter Planners Logo" width="80" height="60"
+                class="me-3 rounded-circle border border-light">
+              <h3 class="mb-0" style="color:#d63384; font-weight: bold;">EverAfter Planners</h3>
+            </div>
+            <p style="font-size: 0.95rem; line-height: 1.6;">
+              We create unforgettable memories by planning and managing stunning weddings, birthdays,
+              corporate events, and more. Our passion is turning your dream event into reality
+              with precision, creativity, and love.
+            </p>
+            <p style="font-size: 0.9rem; color: #ccc;">
+              Let us handle the details while you enjoy your special moments!
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-md-2 mb-4  ms-5">
+            <h4 class="mb-3" style="color:#d63384;">Quick Links</h4>
+            <div class="row">
+              <div class="col-6">
+                <ul class="footer-links list-unstyled">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="event_detail.html">Events</a></li>
+                  <li><a href="photos.html">Gallery</a></li>
+                  <li><a href="registration.html">Register</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Contact Information -->
+          <div class="col-md-4 text-start mb-4">
+            <h4 class="mb-3" style="color:#d63384;">Contact Us</h4>
+            <p>
+              <i class="bi bi-geo-alt-fill me-2" style="color:red; font-size:1.3rem;"></i>
+              123 Celebration Avenue, Mumbai, India
+            </p>
+            <p>
+              <i class="bi bi-telephone-fill me-2" style="color:green; font-size:1.3rem;"></i>
+              +91 9876543210
+            </p>
+            <p>
+              <i class="bi bi-envelope-fill me-2" style="font-size:1.3rem; color:#d63384;"></i>
+              info@everafterplanners.com
+            </p>
+
+            <!-- Social Media Icons BELOW Email -->
+            <div class="d-flex gap-3 mt-3">
+              <a href="https://www.instagram.com/" target="_blank" style="color:#E1306C;" class="fs-4">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/" target="_blank" style="color:#1877F2;" class="fs-4">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="https://twitter.com/" target="_blank" style="color:#1DA1F2;" class="fs-4">
+                <i class="bi bi-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <hr style="border-color: #444;">
+        <div class="text-center">
+          <p class="mb-0" style="font-size: 0.9rem;">
+            © 2025 <span style="color:#d63384; font-weight: bold;">EverAfter Planners</span> |
+            Designed with <i class="bi bi-heart-fill" style="color:#d63384;"></i> for your special moments
+          </p>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

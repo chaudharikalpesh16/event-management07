@@ -2,154 +2,603 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EverAfter Planners-home</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <style>
+
+    /* Add to your <style> section */
+/*body {
+  margin: 0;
+  padding: 0;
+}*/
+body, html {
+  overflow-x: hidden;
+   margin: 0;
+  padding: 0;
+}
+
+
+    /*button*/
+  .btn{
+  background: #d63384;
+  color: #fff;
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+ 
+}
+.btn:hover {
+  background: #b1246a;
+  transform: scale(1.05);
+}
+    /* Navbar */
+    .navbar-nav .nav-link {
+      position: relative;
+      transition: color 0.3s;
+    }
+    .navbar-nav .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #d63384;
+      left: 0;
+      bottom: -5px;
+      transition: width 0.3s;
+    }
+    .navbar-nav .nav-link:hover::after {
+      width: 100%;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #d63384;
+    }
+
+    /*Footer*/
+    footer {
+      background: white;
+      color: white;
+    }
+
+
+    footer a {
+      color: white;
+      transition: color 0.3s;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #d63384;
+    }
+    /* Quick Links Styling */
+.footer-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-block;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect - Underline Slide */
+.footer-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #d63384; /* Accent color */
+  transition: width 0.3s ease;
+  -webkit-transition: width 0.3s ease;
+}
+
+.footer-links li a:hover::after {
+  width: 100%;
+  left: 0;
+  background: #d63384;
+}
+
+.footer-links li a:hover {
+  color: #d63384; /* Text color on hover */
+  transform: translateX(3px); /* Small slide effect */
+}
+
+/*card hover*/
+
+.card {
+      border: none;
+      background: #f8eaf2;
+      /*transition: transform 0.3s, box-shadow 0.3s;*/
+      transition: all 0.3s ease-in-out;
+      border: 5px solid transparent;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      border: 2px solid black;
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    .card img{
+      transition: transform 0.5s ease;
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .card:hover img{
+      transform: scale(1.1);
+    }
+    .card h5{
+      color: #d63384;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    .card:hover h5{
+      color: black;
+    }
+
+    /*text color8*/
+    .t-text{
+      color: #d63384;
+    }
+    /* Centered Title */
+.title-wrapper {
+  text-align: center; /* Keeps the title centered */
+  margin-bottom: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Centered Title */
+.title-wrapper {
+  text-align: center; /* Ensures the title stays in the center horizontally */
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 2.5rem;          /* Balanced size */
+  font-weight: 600;            /* Moderate boldness */
+  color: #000;                 /* Black text */
+  text-transform: uppercase;   /* Professional uppercase style */
+  letter-spacing: 1px;
+  margin: 0 auto;
+  padding-bottom: 8px;
+  position: relative;
+  display: block;              /* Block display for perfect centering */
+  text-align: center;          /* Ensures text inside the block is centered */
+}
+
+/* Underline Effect */
+.title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #d63384; /* Accent color */
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.title:hover::after {
+  width: 120px;
+}
+
+    /* Hero Section */
+    .hero {
+      position: relative;  
+      height: 65vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+      margin-top: 0;
+    }
+
+    /* Dark overlay for better text visibility */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    /* Hero Content */
+    .hero-overlay {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
+    }
+
+    .hero-overlay h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+      letter-spacing: 1px;
+      animation: slideDown 1.2s ease-in-out;
+    }
+
+    .hero-overlay p {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Slide Down Animation */
+    @keyframes slideDown {
+      from {
+        transform: translateY(-30px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+   
+
+    
+  </style>
 </head>
-<bodtion>
-    <!--header start-->
-    <!--strat the nevgebar-->
-    <header>
-       <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">  <img src="images/pet 2.jpg" alt="pet" width="30" height="24" class="d-inline-block align-text-top"> Pet Shop </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active bg-danger" aria-current="page" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Services.html">Serivices</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="products.html">products</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-           Pet Gallery
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="photo;.html">Photo</a></li>
-            <li><a class="dropdown-item" href="video.html">Video</a></li>
-          </ul>
-          <li class="nav-item">
-          <a class="nav-link" href="Contact.html">Contact US</a>
-        </li>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-     </header>
-    <!--header end -->
+<body>
 
-    <!--slider start-->
-    <!--servics section strat-->
-    <main>
-      <section>
-        <div id="carouselExampleCaptions" class="carousel slide carousel-fade">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+     <!--header start-->
+  <header>
+    <!-- navbar start -->
+    <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+    <div class="container">
+      <img src="images/logo1.png" width="180" height="80" alt="Logo">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active fw-bold text-pink" style="color:#d63384" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link " href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class=" nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="event_detail.html">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="registration.html">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <!-- navbar end -->
+  </header>
+  <!--header end-->
+
+      <main class="pt-5 mt-5" style="background-color: #f1f3f5;">
+     
+      
+<!-- Hero Section -->
+<section class="hero mb-3 pt-5">
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="w-100 h-100 object-fit-cover position-absolute top-0 start-0" style="z-index: 0;">
+    <source src="docs/banner_home.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay Content -->
+  <div class="hero-overlay">
+    <h1>We Create Unforgettable Event</h1>
+    <p>Weddings , Parties , Corporate , Concerts</p>
   </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="images/cat1.jpg" class="d-block w-100" alt="cat">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
-      </div>
-    </div>
-    <div class="carousel-item active">
-      <img src="images/cat4.jpg" class="d-block w-100" alt="cat">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>
-    </div>
-    <div class="carousel-item active">
-      <img src="images/cat god.jpg" class="d-block w-100" alt="cat">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
-      </div>
-    </div>
-    <div class="carousel-item active">
-      <img src="images/id 2.jpg" class="d-block w-100" alt="cat">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>fouth slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
-      </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-      </section>
-<!--slider end-->
+</section>
 
 
-<!--card strat-->
-<!--servics section strat-->
+      <!--About section start-->
       <section class="mt-5">
-        <div class="container">
-          <div class="row">
+        <div class=" card container shadow p-3 mb-5 bg-body-tertiary rounded">
+            <div class="row">
+                <div class="col-md-12" style="background-color: #f8eaf2;">
+                <h2 class="title text-center mb-4">About Us</h2>
+                <p>We are your trusted partner in event management. Wih years of expertise and creativity, we specialize in making every moment memorable whether it's an elegant wedding, a corporate conference, or a fun-fi-filled party.</p>   
+                </div>
+
+            </div>
+
+        </div>
+      </section>
+    <!--About section end-->
+    
+
+<!--services section start-->
+
+
+<section class="mt-5">
+   <h2 class="title text-center mb-4">Our Services</h2>
+    <div class="container">
+        <div class="row">
             <div class="col-md-3">
-              <div class="card">
-  <img src="images/cat 6.jpg" class="card-img-top" alt="cat">
-  <div class="card-body">
-    <h5 class="card-title">pet</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
-  </div>
-</div>
-</div>
-     <div class="col-md-3">
-              <div class="card">
-  <img src="images/cat 6.jpg" class="card-img-top" alt="cat">
-  <div class="card-body">
-    <h5 class="card-title">pet</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
-  </div>
-</div>
-</div>
-     <div class="col-md-3">
-              <div class="card">
-  <img src="images/cat 6.jpg" class="card-img-top" alt="cat">
-  <div class="card-body">
-    <h5 class="card-title">pet</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
-  </div>
-</div>
-</div>
-     <div class="col-md-3">
-              <div class="card">
-  <img src="images/cat 6.jpg" class="card-img-top" alt="cat">
-  <div class="card-body">
-    <h5 class="card-title">pet</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
-  </div>
-</div>
-</div>
-</div>
- </div>
- </section>
-      <!--card end-->
-    </main>
+                <div class="card mb-4" style="width: 18rem;">
+              <img src="images/w_event.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+              <h5 class="card-title">💍 Wedding Planning</h5>
+               <p class="card-text">We design and organize weddings that reflect your unique love story. From décor, venue selection, catering, photography, and entertainment — we handle it all so you can enjoy your big day stress-free.</p>
+            </div>   
+          </div> 
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4" style="width: 18rem;">
+              <img src="images/c_party.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+              <h5 class="card-title">🏢 Corporate Events</h5>
+               <p class="card-text">From conferences to product launches and team-building activities, we ensure your business events are professional, seamless, and impactful — leaving a lasting impression on your clients and employees.</p>
+            </div>   
+          </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4" style="width: 18rem;">
+              <img src="images/party.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+              <h5 class="card-title">🎶 Parties & Concerts</h5>
+               <p class="card-text">Whether it’s a birthday bash, anniversary, music concert, or festival, we bring energy and creativity to make your celebration lively and unforgettable with fun,excitement and lasting memories.</p>
+             </div>  
+          </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4" style="width: 18rem;">
+              <img src="images/event3.webp" class="card-img-top" alt="...">
+              <div class="card-body">
+              <h5 class="card-title">🎪 Custom Events</h5>
+               <p class="card-text">No matter the occasion — from exhibitions, fashion shows, to cultural events — we bring your ideas to life with personalized planning and flawless execution ensuring perfection,elegance and remarkable experiences</p>
+             </div>  
+          </div>
+            </div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        </div>
+        <center>
+         <a href="services.html" class="btn btn-lg mt-3">View All Services</a>
+         </center>
+    </div>
+
+    <!--Review Section Start-->
+<section class="mt-5 shadow p-3 mb-5 bg-body-tertiary rounded">
+  <div class="container">
+    <!--<h1 class="d-flex justify-content-center mb-5 t-text">What Our Clients Say</h1>-->
+      <h2 class="title text-center mb-4">What Our Clients Say</h2>
+    
+    <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Review 1 -->
+        <div class="carousel-item active">
+          <div class="card mx-auto text-center p-3" style="max-width: 500px; background:#f8eaf2;">
+            <img src="images/r1.jpg" alt="Client 1" 
+                 class="rounded-circle mb-2 border border-1 border-light" width="40" height="40">
+            <h6 class="card-title mb-1">Priti Patil</h6>
+            <p class="text-muted mb-2" style="font-size:0.8rem;">Wedding Event</p>
+            <p class="card-text" style="font-size:0.9rem;">
+              <i class="bi bi-quote" style="color:#d63384; font-size: 1.1rem;"></i>
+              EverAfter Planners made our wedding absolutely magical! Everything was perfectly organized, and we didn’t have to worry about a thing.
+            </p>
+            <div class="mt-2 text-warning fs-6">
+              ⭐⭐⭐⭐⭐
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="carousel-item">
+          <div class="card mx-auto text-center p-3" style="max-width: 500px; background:#f8eaf2;">
+            <img src="images/sanket.jpg" alt="Client 2" 
+                 class="rounded-circle mb-2 border border-1 border-light" width="40" height="40">
+            <h6 class="card-title mb-1">Sanket Jadhav</h6>
+            <p class="text-muted mb-2" style="font-size:0.8rem;">Corporate Event</p>
+            <p class="card-text" style="font-size:0.9rem;">
+              <i class="bi bi-quote" style="color:#d63384; font-size: 1.1rem;"></i>
+              Professional and seamless service! Our corporate event was a huge success, and our clients were extremely impressed.
+            </p>
+            <div class="mt-2 text-warning fs-6">
+              ⭐⭐⭐⭐⭐
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="carousel-item">
+          <div class="card mx-auto text-center p-3" style="max-width: 500px; background:#f8eaf2;">
+            <img src="images/r2.jpg" alt="Client 3" 
+                 class="rounded-circle mb-2 border border-1 border-light" width="40" height="40">
+            <h6 class="card-title mb-1">Aniket Khomane</h6>
+            <p class="text-muted mb-2" style="font-size:0.8rem;">Birthday Party</p>
+            <p class="card-text" style="font-size:0.9rem;">
+              <i class="bi bi-quote" style="color:#d63384; font-size: 1.1rem;"></i>
+              My sister’s birthday party was unforgettable! The decorations and arrangements were just perfect.
+            </p>
+            <div class="mt-2 text-warning fs-6">
+              ⭐⭐⭐⭐☆
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color:#d63384; border-radius:50%;"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true" style="background-color:#d63384; border-radius:50%;"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+<!--Review Section End-->
+     
+    <!--FAQ question starts-->
+
+    <section class="mt-5  ">
+  <div class="container mb-5">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="title text-center mb-4">Plan Your Perfect Event With Us</h2>
+        <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color: black;background-color: #fce4f6; border: 1px solid #d63384">
+        Event Planning & Coordination
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        We handle everything from concept creation to flawless execution. Our team ensures smooth coordination of vendors, timelines, logistics, and guest experiences so that you can relax and enjoy your event without stress. From the initial consultation to the final wrap-up, we take care of every detail so your event runs seamlessly.
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color: black;background-color: #fce4f6;">
+        Theme & Decor Design
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        We create unique themes and décor that perfectly reflect your style and occasion. From elegant floral arrangements to vibrant stage setups, our designs add a personal touch and leave a lasting impression. Whether it’s a classic wedding, a glamorous party, or a professional corporate setup, our décor experts transform your vision into reality.
+
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="color: black;background-color: #fce4f6;">
+        Weddings & Special Occasions
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        We make your special day unforgettable by managing every detail with care. From engagement to reception, we design magical experiences filled with beautiful décor, perfect planning, and cherished memories. With our personalized approach, we ensure your wedding or celebration truly reflects your story and creates lasting happiness for you and your guests.
+
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+
+    </div>
+
+  </div>
+
+   <!--FAQ question end-->
+ 
+   
+</section>
+
+
+
+<section class="mt-5">
+
+</section>
+
+ <!-- Footer -->
+  <footer class="text-white pt-5" style="background-color: #000;">
+    <section>
+      <div class="container">
+        <div class="row">
+
+          <!-- Logo & About Section -->
+          <div class="col-md-4 text-start mb-4">
+            <div class="d-flex align-items-center mb-3">
+              <img src="images/logo1.png" alt="EverAfter Planners Logo" width="80" height="60"
+                class="me-3 rounded-circle border border-light">
+              <h3 class="mb-0" style="color:#d63384; font-weight: bold;">EverAfter Planners</h3>
+            </div>
+            <p style="font-size: 0.95rem; line-height: 1.6;">
+              We create unforgettable memories by planning and managing stunning weddings, birthdays,
+              corporate events, and more. Our passion is turning your dream event into reality
+              with precision, creativity, and love.
+            </p>
+            <p style="font-size: 0.9rem; color: #ccc;">
+              Let us handle the details while you enjoy your special moments!
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-md-3 mb-4  ms-5">
+            <h4 class="mb-3" style="color:#d63384;">Quick Links</h4>
+            <div class="row">
+              <div class="col-6">
+                <ul class="footer-links list-unstyled">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="event_detail.html">Events</a></li>
+                  <li><a href="photos.html">Gallery</a></li>
+                  <li><a href="registration.html">Register</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Contact Information -->
+          <div class="col-md-4 text-start mb-4">
+            <h4 class="mb-3" style="color:#d63384;">Contact Us</h4>
+            <p>
+              <i class="bi bi-geo-alt-fill me-2" style="color:red; font-size:1.3rem;"></i>
+              123 Celebration Avenue, Mumbai, India
+            </p>
+            <p>
+              <i class="bi bi-telephone-fill me-2" style="color:green; font-size:1.3rem;"></i>
+              +91 9876543210
+            </p>
+            <p>
+              <i class="bi bi-envelope-fill me-2" style="font-size:1.3rem; color:#d63384;"></i>
+              info@everafterplanners.com
+            </p>
+
+            <!-- Social Media Icons BELOW Email -->
+            <div class="footer_socials d-flex gap-3 mt-3">
+              <a href="https://www.instagram.com/" target="_blank" style="color:#E1306C;" class="fs-4">
+                <i class="bi bi-instagram"></i>
+              </a>
+              <a href="https://www.facebook.com/" target="_blank" style="color:#1877F2;" class="fs-4">
+                <i class="bi bi-facebook"></i>
+              </a>
+              <a href="https://twitter.com/" target="_blank" style="color:#1DA1F2;" class="fs-4">
+                <i class="bi bi-twitter"></i>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+        <hr style="border-color: #444;">
+        <div class="text-center">
+          <p class="mb-0" style="font-size: 0.9rem;">
+            © 2025 <span style="color:#d63384; font-weight: bold;">EverAfter Planners</span> |
+            Designed with <i class="bi bi-heart-fill" style="color:#d63384;"></i> for your special moments
+          </p>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+    </script> 
 </body>
 </html>

@@ -1,0 +1,112 @@
+
+/* Navbar */
+    .navbar-nav .nav-link {
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .navbar-nav .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #d63384;
+      left: 0;
+      bottom: -5px;
+      transition: width 0.3s;
+    }
+
+    .navbar-nav .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #d63384;
+    }
+ .card{
+      border-radius:12px;
+      box-shadow: 0px 6px 5px black;
+      padding: 20px;
+      transition: 0.3s;
+      margin-bottom: 30px;
+    }
+    .card:hover{
+      transform: scale(1.03);
+    }
+
+    .btn-submit {
+        background-color: white;
+        color: black;
+        border-color: black;
+        font-weight: 600;
+        border-radius: 30px;
+        padding: 10px 30px;
+        transition: 0.3s;
+      }
+      .btn-submit:hover {
+        background-color: black;
+        color: #fff;
+      }
+
+      
+
+/* Footer */
+    footer {
+      background: black;
+      color: white;
+    }
+
+    footer a {
+      color: white;
+      transition: color 0.3s;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #d63384;
+    }
+    /* Quick Links Styling */
+.footer-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-block;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect - Underline Slide */
+.footer-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: #d63384; /* Accent color */
+  transition: width 0.3s ease;
+  -webkit-transition: width 0.3s ease;
+}
+
+.footer-links li a:hover::after {
+  width: 100%;
+  left: 0;
+  background: #d63384;
+}
+
+.footer-links li a:hover {
+  color: #d63384; /* Text color on hover */
+  transform: translateX(3px); /* Small slide effect */
+}
+/* Footer Social Icons Hover - Same as Team Socials */
+.footer_socials a {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer_socials a:hover {
+  color: #d63384 !important; /* Matches the hover effect of team_socials */
+  transform: scale(1.2);
+}
+
+
